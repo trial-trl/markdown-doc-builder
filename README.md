@@ -1,15 +1,15 @@
-# markdown-doc-builder
+# @trial-trl/markdown-doc-builder
 
 Markdown documents builder. Can output .md and .html files
 
 ## 1. Usage
 
-> npm install --save markdown-doc-builder
+> npm install --save @trial-trl/markdown-doc-builder
 
-Using [markdown-doc-builder](https://www.npmjs.com/package/markdown-doc-builder) is quite easy:
+Using [@trial-trl/markdown-doc-builder](https://www.npmjs.com/package/@trial-trl/markdown-doc-builder) is quite easy:
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 // output md
@@ -34,7 +34,7 @@ const htmlContent = markdown
 Use the h1, h2, h3, h4, h5, h6 or header to generate a markdown header. Calling header with a level above 6 returns a h6 Header.
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 markdown
@@ -51,7 +51,7 @@ markdown
 ### 2.2. Emphasis
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 markdown
@@ -65,7 +65,7 @@ markdown
 ### 2.3. Lists
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 markdown
@@ -84,7 +84,7 @@ markdown
 ### 2.4. Table
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 const table = markdown
@@ -103,19 +103,19 @@ markdown
 ### 2.5. Link
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 markdown
     .newBuilder()
-    .link('https://github.com/arnozhang/markdown-doc-builder', 'markdown-doc-builder')
+    .link('https://github.com/trial-trl/markdown-doc-builder', '@trial-trl/markdown-doc-builder')
     .toMarkdown();
 ```
 
 ### 2.5. Image
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 markdown
@@ -127,7 +127,7 @@ markdown
 ### 2.6. Code
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 markdown
@@ -140,8 +140,8 @@ markdown
 markdown
     .newBuilder()
     .codeBlock(MarkdownCodeType.Json, JSON.stringify({
-        name: 'Arno Zhang',
-        github: 'https://github.com/arnozhang',
+        name: 'Matheus Leonardo',
+        github: 'https://github.com/mlsm-trl',
     }, null, 4))
     .toMarkdown();
 ```
@@ -150,7 +150,7 @@ markdown
 
 
 ```typescript
-import markdown from 'markdown-doc-builder';
+import markdown from '@trial-trl/markdown-doc-builder';
 
 
 const styles = markdown
