@@ -1,6 +1,5 @@
 /**
- * @author arnozhang <zyfgood12@163.com>
- * @date 2020/08/24
+ * @author mlsm-trl <mlsm@trialent.com>, arnozhang <zyfgood12@163.com>
  */
 
 import { JsUtils } from "js-utils-lite";
@@ -131,9 +130,9 @@ export interface MarkdownContentBuilder {
 
 export abstract class MarkdownBaseNode implements MarkdownContentBuilder {
 
-    type: MarkdownNodeType;
+    type: number;
 
-    protected constructor(type: MarkdownNodeType) {
+    protected constructor(type: number) {
         this.type = type;
     }
 }
@@ -151,7 +150,7 @@ export class MarkdownBaseContentNode extends MarkdownBaseNode {
 
     content: MarkdownContent;
 
-    protected constructor(type: MarkdownNodeType, content: MarkdownContent) {
+    protected constructor(type: number, content: MarkdownContent) {
         super(type);
         this.content = content;
     }
