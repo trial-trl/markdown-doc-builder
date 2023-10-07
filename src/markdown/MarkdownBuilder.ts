@@ -1,15 +1,9 @@
 import { HtmlStyles } from "..";
 import { HeaderIndicator } from "../impl/HeaderIndicator";
-import {
-    MarkdownBaseNode,
-    MarkdownCodeType,
-    MarkdownContent,
-    MarkdownContentBuilder,
-    MarkdownHeader
-} from "./MarkdownDeclares";
+import { MarkdownBaseNode, MarkdownCodeType, MarkdownContent, MarkdownContentBuilder, MarkdownHeader } from "./MarkdownDeclares";
 import { MarkdownTableBuilder } from "./MarkdownTableBuilder";
 import { MarkdownListBuilder, MarkdownListItems } from "./MarkdownListBuilder";
-import { markdown } from "./Markdown";
+import {  markdown } from "./Markdown";
 
 
 /**
@@ -22,11 +16,11 @@ export class MarkdownBuilder implements MarkdownContentBuilder {
         return new this() as InstanceType<T>;
     }
 
-    private title: string;
-    private isHeaderOrdered: boolean = true;
-    private headerIndicator = new HeaderIndicator();
+    title: string;
+    isHeaderOrdered: boolean = true;
+    headerIndicator = new HeaderIndicator();
 
-    private readonly nodes: MarkdownBaseNode[] = [];
+    readonly nodes: MarkdownBaseNode[] = [];
 
 
     constructor() {

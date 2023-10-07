@@ -1,6 +1,6 @@
 {
     "name": "@trial-trl/markdown-doc-builder",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Markdown documents builder. Can output .md and .html files",
     "main": "lib/index.js",
     "scripts": {

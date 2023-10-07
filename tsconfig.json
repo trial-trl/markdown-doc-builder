@@ -4,7 +4,6 @@
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "esModuleInterop": true,
-        "suppressImplicitAnyIndexErrors": true,
         "lib": [
             "dom",
             "es5",

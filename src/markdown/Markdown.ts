@@ -24,6 +24,7 @@ import { MarkdownTableBuilder } from "./MarkdownTableBuilder";
 import { MarkdownListBuilder, MarkdownListItems } from "./MarkdownListBuilder";
 import { MarkdownBuilder } from "./MarkdownBuilder";
 import { HtmlStyles } from "..";
+import { ChainedBuilderInstance, InferMarkdownBuilderInstanceType } from "../types/extension";
 
 /**
  * @author mlsm-trl <mlsm@trialent.com>, arnozhang <zyfgood12@163.com>
@@ -98,8 +99,8 @@ export const markdown = {
         return null;
     },
 
-    newBuilder<T extends typeof MarkdownBuilder>(customBuilder?: T): InstanceType<T> {
-        return (customBuilder || MarkdownBuilder).newBuilder() as InstanceType<T>;
+    newBuilder<T extends ChainedBuilderInstance>(customBuilder?: T): InferMarkdownBuilderInstanceType<T> {
+        return (customBuilder?.newBuilder() || MarkdownBuilder.newBuilder()) as InferMarkdownBuilderInstanceType<T>;
     },
 
     newTableBuilder(row: number, col: number) {

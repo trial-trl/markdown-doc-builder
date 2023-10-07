@@ -206,7 +206,7 @@ export class MarkdownHeader extends MarkdownBaseContentNode {
         return `<${tag}>${index}${this.htmlDocContent}</${tag}>\n`;
     }
 
-    private getIndex(): string {
+    getIndex(): string {
         if (this.indicator == null) {
             return '';
         }
@@ -430,7 +430,7 @@ export class MarkdownImage extends MarkdownBaseNode {
         this.description = description;
     }
 
-    private get imgDescription() {
+    get imgDescription() {
         let description = this.description;
         if (JsUtils.isEmpty(description)) {
             description = this.imageUrl;
@@ -460,7 +460,7 @@ export class MarkdownLink extends MarkdownBaseNode {
         this.title = title;
     }
 
-    private get urlTitle() {
+    get urlTitle() {
         let title = this.title;
         if (JsUtils.isEmpty(title)) {
             title = this.url;
@@ -498,7 +498,7 @@ export class MarkdownTable extends MarkdownBaseNode {
 
 export class MarkdownCompositeNodes extends MarkdownBaseNode {
 
-    private readonly nodes: MarkdownBaseNode[] = [];
+    readonly nodes: MarkdownBaseNode[] = [];
 
     constructor(...nodes: MarkdownBaseNode[]) {
         super(MarkdownNodeType.CompositeNodes);
