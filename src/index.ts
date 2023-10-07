@@ -7,11 +7,11 @@ export * from "./html/HtmlStyles";
 
 export * from "./markdown/MarkdownDeclares";
 export * from "./markdown/MarkdownBuilder";
-export * from "./markdown/MarkdownExtension";
 export * from "./markdown/MarkdownTableBuilder";
 export * from "./markdown/MarkdownListBuilder";
 
-
 import { markdown } from "./markdown/Markdown";
+import extend from "./markdown/MarkdownExtension";
 
+export { extend };
 export { markdown as default };
